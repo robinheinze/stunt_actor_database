@@ -1,3 +1,21 @@
+body {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #34D0B6 !important;
+}
+
+small {
+  color: black !important;
+}
+
+.navbar {
+  background-color: #F93E58 !important;
+}
+
+.navbar-brand {
+  color: black !important;
+}
+
 .display_name {
   font-size: 25px;
 }
@@ -10,5 +28,22 @@
 .stat {
   font-weight: bold;
 }
+
+.index-image {
+  height: 150px;
+  width: 150px;
+  border: 1px solid gray;
+
+}
+
+.btn-yellow {
+  background-color: #FFA400;
+  color: white;
+}
+
+.skill-table {
+  margin: 5px;
+}
+
 
 

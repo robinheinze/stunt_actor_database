@@ -11,6 +11,13 @@
           <span class="stat"><%= stat.sub(/_/, ' ').titleize %>: </span><span class="value"> <%= value.to_s.sub(/_/, ' ').titleize %></span>
         </div>
       <% end %>
+
+      <h4>Skills</h4>
+
+      <p>
+        <%= @person.skills.map{ |s| s.name.titleize }.join(", ") %>
+      </p>
+
       <div class="row">
         <p>
           <a href="/people" class="btn btn-primary">Back To Main Page</a>

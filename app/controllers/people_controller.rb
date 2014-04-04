@@ -2,7 +2,7 @@ class PeopleController < ApplicationController
 
   def index
     @people = Person.all
-    render 'index.html.erb'
+    render('index.html.erb')
   end
 
   def new
@@ -14,6 +14,8 @@ class PeopleController < ApplicationController
     @person = Person.new(params[:person])
     @person.slug = @person.name.parameterize
     if @person.save
+      skills = params[:skills].nil? ? [] : params[:skills].map { |id| Skill.find(id)}
+      skills.each { |skill| @person.skills << skill }
       flash[:notice] = "Congratulations, #{@person.name}! Your profile has been created. Welcome to Stunts Я Us!"
       redirect_to("/people/#{@person.slug}")
     else
@@ -34,6 +36,8 @@ class PeopleController < ApplicationController
   def update
     @person = Person.find_by(:slug => params[:slug])
     if @person.update(params[:person])
+      skills = params[:skills].nil? ? [] : params[:skills].map { |id| Skill.find(id)}
+      @person.update(:skills => skills)
       flash[:notice] = "Your profile was updated!"
       redirect_to("/people/#{@person.slug}")
     else

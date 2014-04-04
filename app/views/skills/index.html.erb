@@ -1,0 +1,28 @@
+<h2>Stunts Я Us</h2>
+<h4 class="">All Skills</h4>
+
+<div class="col-md-12">
+  <table>
+    <% @skills.each do |skill| %>
+      <tr>
+        <td class="skill-table"><%= skill.name %></td>
+        <td class="skill-table"><a href="/skills/<%= skill.slug %>/edit" class="btn btn-primary btn-xs">Edit</a></td>
+        <td class="skill-table"><a href="/skills/<%= skill.slug %>" class="btn btn-danger btn-xs"
+          data-confirm = "Are you sure you wish to delete this skill? This cannot be undone."
+          data-method="delete"
+          rel="nofollow">
+          Delete</a></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+<form action="/skills" method="post">
+  <%= render "form" %>
+  <button class="btn-primary">Add Skill</button>
+</form>
+
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container">
+    <p class="navbar-text navbar-right">Stunts Я Us</p>
+  </div>
+</nav>

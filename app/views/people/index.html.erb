@@ -1,15 +1,15 @@
-<h2>Stunts Я Us</h2>
-<h4 class="">The best stunt actor database...in the WORLD!</h4>
 
-<ul>
+<div class="page-header">
+  <h1>Stunts Я Us <small>The best stunt actor database...in the WORLD!</small></h1>
+</div>
+
+<div class="row">
   <% @people.each do |person| %>
     <div class="col-md-3">
       <a href='/people/<%=person.slug%>'><img src="<%= person.profile_picture %>" class="img-thumbnail"></a>
       <a class = "display-name" href='/people/<%=person.slug%>'><%= person.name %></a>
     </div>
   <% end %>
-</ul>
-
-<div class="col-md-12">
-  <a href="/people/new" class="btn btn-primary">Create New Profile</a>
 </div>
+
+
