@@ -1,28 +1,9 @@
-== README
+User Stories
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+====================================================================
 
-Things you may want to cover:
+As a stunt person, I want to be able to create and edit my profile so stunt coordinators can look me up
 
-* Ruby version
+As a stunt coordinator, I want to be able to browse available stunt people
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+As a stunt coordinator, I want to be able to search for stunt people by name, skill, location, and other attributes

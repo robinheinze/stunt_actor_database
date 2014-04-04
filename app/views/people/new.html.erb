@@ -1,0 +1,10 @@
+<h2>Create your profile</h2>
+
+<%= render('layouts/error', :object => @person) %>
+
+<form role="form" action="/people" method="post">
+  <%= render('form') %>
+  <div class="col-md-12">
+    <button class="btn btn-primary">Create Profile!</button>
+</div>
+</form>

@@ -1,0 +1,39 @@
+<div class="form-group col-md-7">
+  <input class="form-control" id="person_name" name="person[name]" type="text" placeholder="Name" value = '<%= @person.name %>'>
+</div>
+<div class="form-group col-md-7">
+  <input class="form-control" id="person_gender" name="person[gender]" type="text" placeholder="Gender" value = '<%= @person.gender %>'>
+</div>
+<div class="form-group col-md-7">
+  <input class="form-control" id="person_weight" name="person[weight]" type="number" placeholder="Weight (lbs)" value = '<%= @person.weight %>'>
+</div>
+<div class="form-group col-md-7">
+  <input class="form-control" id="person_eye_color" name="person[eye_color]" type="text" placeholder="Eye Color" value = '<%= @person.eye_color %>'>
+</div>
+<div class="form-group col-md-7">
+  <input class="form-control" id="person_hair_color" name="person[hair_color]" type="text" placeholder="Hair Color" value = '<%= @person.hair_color %>'>
+</div>
+<div class="form-group col-md-7">
+  <input class="form-control" id="person_shoe_size" name="person[shoe_size]" type="text" placeholder="Shoe Size" value = '<%= @person.shoe_size %>'>
+</div>
+<div class="form-group col-md-7">
+  <input class="form-control" id="person_physique" name="person[physique]" type="text" placeholder="Physique" value = '<%= @person.physique %>'>
+</div>
+<div class="form-group col-md-7">
+  <input class="form-control" id="person_waist" name="person[waist]" type="number" placeholder="Waist (inches)" value = '<%= @person.waist %>'>
+</div>
+<div class="form-group col-md-7">
+  <input class="form-control" id="person_inseam" name="person[inseam]" type="number" placeholder="Inseam (inches)" value = '<%= @person.inseam %>'>
+</div>
+<div class="form-group col-md-7">
+  <input class="form-control" id="person_profile_picture" name="person[profile_picture]" type="text" placeholder="Profile Picture URL" value = '<%= @person.profile_picture %>'>
+</div>
+
+<div class="form-group col-md-12">
+  <select class="form-control" id="person_role" name="person[role]">
+    <option selected disabled>Choose a role...</option>
+    <option value="stunt_coordinator" <%= @person.role == 'stunt_coordinator' ? "selected" : "" %> >Stunt Coordinator</option>
+    <option value="stunt_actor" <%= @person.role == 'stunt_actor' ? "selected" : "" %> > Stunt Actor</option>
+  </select>
+</div>
+

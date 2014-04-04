@@ -1,0 +1,29 @@
+<h1><%=@person.name %></h1>
+
+<div class='container'>
+  <div class='row'>
+    <div class="col-md-6">
+      <img src="<%= @person.profile_picture%>" class="img-responsive profile-picture">
+    </div>
+    <div class="col-md-6">
+      <% @person.stats.each do |stat, value| %>
+        <div class="row profile-stats">
+          <span class="stat"><%= stat.sub(/_/, ' ').titleize %>: </span><span class="value"> <%= value.to_s.sub(/_/, ' ').titleize %></span>
+        </div>
+      <% end %>
+      <div class="row">
+        <p>
+          <a href="/people" class="btn btn-primary">Back To Main Page</a>
+          <a href="/people/<%= @person.slug %>/edit" class="btn btn-success">Edit Your Profile</a>
+          <a href="/people/<%= @person.slug %>" class="btn btn-danger"
+              data-confirm = "Are you sure you wish to delete your profile? This cannot be undone."
+              data-method="delete"
+              rel="nofollow">
+              Delete Your Profile</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
